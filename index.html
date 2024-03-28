@@ -87,6 +87,7 @@
         <h1>Buttons</h1>
         <button onclick="Telegram.WebApp.expand();">Expand Webview</button>
         <button onclick="toggleMainButton();">Toggle Main Button</button>
+        <button onclick="toggleSettingsButton();">Toggle Settings Button</button>
     </main>
     <div id="viewport"></div>
     <div id="viewport-params-size"></div>
@@ -135,6 +136,15 @@
                 Telegram.WebApp.MainButton.hide();
             } else {
                 Telegram.WebApp.MainButton.show();
+            }
+        };
+
+        // Function to toggle Settings TWA button
+        function toggleSettingsButton() {
+            if (Telegram.WebApp.SettingsButton.isVisible) {
+                Telegram.WebApp.SettingsButton.hide();
+            } else {
+                Telegram.WebApp.SettingsButton.show();
             }
         };
 
